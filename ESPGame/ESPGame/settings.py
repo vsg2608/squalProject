@@ -79,7 +79,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'ESPGame',
-        'USER': 'visheshESP',
+        'USER': 'vishesh',
         'PASSWORD': 'Vishesh1234',
         'HOST': 'mysql-db.cjajd1yfijuv.ap-south-1.rds.amazonaws.com',
         'PORT': '3304',
@@ -124,3 +124,28 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+)
+
+MEDIA_ROOT= os.path.join(BASE_DIR, 'media')
+MEDIA_URL= '/media/'
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+DATA_UPLOAD_MAX_NUMBER_FIELDS=100000
+CRISPY_TEMPLATE_PACK= 'bootstrap4'
+
+#LOGIN_REDIRECT_URL= 'Dashboard_Home'
+#LOGIN_URL= 'User_Login'
+
+# SESSION_SECURITY_WARN_AFTER = 120
+# SESSION_SECURITY_EXPIRE_AFTER = 150
+# SESSION_EXPIRE_AT_BROWSER_CLOSE = True
+
+# EMAIL_BACKEND= 'django.core.mail.backends.smtp.EmailBackend'
+# EMAIL_HOST= 'smtp.gmail.com'
+# EMAIL_PORT= 587
+# EMAIL_USE_TLS= True
+# EMAIL_HOST_USER= "" 
+# EMAIL_HOST_PASSWORD= ""
